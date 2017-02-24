@@ -17,10 +17,20 @@ of s.
 
 
 '''
-# reverse the string
+#read in the file
 
+F = open("rosalind_revc.txt","r")
+revc = F.read() 
+# reverse the string
+#revc = 'AAAACCCGGT'
 index = -1
-reverse = ('AAAACCCGGT'[::-1])
+reverse = (revc[::-1])
+print reverse
+
+reversedlist = list(reverse)
+print reversedlist
+
+# convert a string to a list
 reversedlist = list(reverse)
 
 print reverse
@@ -28,7 +38,7 @@ print reverse
 for i in reversedlist:
     index = index + 1
     print index
-    print i
+    #print i
     if i == "T":
         reversedlist[index] = "A"
     if i == "A":
@@ -37,10 +47,21 @@ for i in reversedlist:
         reversedlist[index] = "C"
     if i == "C":
         reversedlist[index] = "G"    
-        
-        
-    print reversedlist
-  
+          
+print reversedlist
+    #convert the list back to a string
+rnastring = ''.join(reversedlist)
+print rnastring
+
+#ouput the data to a textfile called rosalind_revc_results.txt
+recvoutput = open("rosalind_revc_results.txt", "w")
+recvoutput.write(rnastring)
+recvoutput.close()
+
+
+
+
+
     
     
         
