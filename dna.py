@@ -1,10 +1,18 @@
-strand = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+'''
+
+
+'''
+
+F = open("rosalind_dna.txt","r")
+#print F.readlines() 
+strand = F.read() 
+#strand = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+#print strand
 counterA = 0
 counterC = 0
 counterG = 0
 counterT = 0
 for symbol in strand:
-    #print(symbol)
     if symbol == "A":
         counterA = counterA + 1
     if symbol == "C":
