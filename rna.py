@@ -17,9 +17,9 @@ Return: The transcribed RNA string of t
 .
 
 '''
-
-rna = "GATGGAACTTGACTACGTAAATT"
-
+F = open("rosalind_rna.txt","r")
+rna = F.read() 
+#rna = "GATGGAACTTGACTACGTAAATT"
 print (rna.replace("T", "U"))
 
 
