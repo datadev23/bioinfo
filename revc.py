@@ -22,6 +22,7 @@ of s.
 F = open("rosalind_revc.txt","r")
 revc = F.read() 
 # reverse the string
+# commented out test string
 #revc = 'AAAACCCGGT'
 index = -1
 reverse = (revc[::-1])
